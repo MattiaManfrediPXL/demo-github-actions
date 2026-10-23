@@ -1,0 +1,17 @@
+name: Files Examples
+
+on:
+  workflow_dispatch:
+
+jobs:
+  files-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create directory
+        run: mkdir mijnmap
+
+      - name: Write to file
+        run: echo "Korte tekst." > mijnmap/tekst.txt
+
+      - name: Show directory
+        run: ls -alh mijnmap
